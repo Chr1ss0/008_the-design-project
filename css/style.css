@@ -1,0 +1,313 @@
+/*# === Import & Root === */
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url(../font/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(../font/Roboto-Bold.ttf);
+}
+
+:root {
+--accsent-color: #0B0C17;
+--act_color: #FF3571;
+--main_font: Roboto-Light;
+--nummeric_color: #DDDDDD;
+--sec_font: Roboto-Bold;
+}
+
+/*# === Reset & Globals === */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F5F5F5;
+    font-family: var(--main_font);
+    margin: 0 auto;
+    max-width: 90rem;
+}
+
+a {
+    color: var(--act_color);
+    font:0.875rem var(--sec_font);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+button {
+    background-color: #FF3571;
+    border: none;
+    border-radius: 0.25rem;
+    color: white;
+    font: 1.1875rem Arial;
+    padding: 0.9375rem 5rem;
+}
+
+h1 {
+
+font: 3.375rem var(--sec_font);
+}
+h2{
+
+font: 2.375rem var(--sec_font);
+}
+h3{
+
+font: 1.75rem var(--sec_font);
+}
+h4 {
+
+font: 1.1875rem var(--sec_font);
+}
+h5 {
+
+font: 1.5rem var(--sec_font);
+}
+
+p {
+    font-size: 0.875rem;
+    line-height: 1.75rem;
+}
+
+/*# === Header === */
+
+header {
+background: url(../img/backgroundheader.png) no-repeat right / contain;
+padding-bottom: 1.0625rem;
+/* !With Background */
+}
+
+@keyframes float-guy {
+    0% {
+        transform: translatey(0rem);
+    }
+    50% {
+        transform: translatey(-2.5rem);
+    }
+    100% {
+        transform: translatey(0rem);
+    }
+}
+
+/* !Nicht so schön gelöst mit p:absolute aber mit Flow/Flex wuerde es recht klein werden 
+! Klappt halt nur auf der Mac auflösung */
+header > img {
+    animation: float-guy 6s ease-in-out infinite;
+    bottom: 6.25rem;
+    left: 37.5rem;
+    position: absolute;
+    width: 50rem;
+}
+
+.logo {
+padding: 2.375rem 5.6875rem;
+}
+
+.logo > p {
+    font-size: 0.75rem;
+    line-height: 1;
+}
+
+.headline {
+    padding-left: 9rem;
+    padding-top: 21.875rem;
+}
+
+.headline > h1 {
+    padding-bottom: 1.25rem;
+    width: 26.25rem;
+}
+
+.headline > p {
+    display: inline;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+.headline > p > img {
+    display: inline;
+    object-fit: contain;
+    width: 2rem;
+}
+
+/* #=== Main === */
+
+.main-start a {
+    display: inline-block;
+    padding: 3.75rem 0 8.125rem 8.75rem;
+}
+
+.main-start > img {
+    max-width: 100%;
+    object-fit: cover;
+    padding-bottom: 15.625rem;
+}
+
+.main-start__tb > h2 > img {
+    display: inline;
+    object-fit: contain;
+    width: 3.75rem;
+}
+
+.main-start__tb {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 6.25rem;
+}
+
+.main-start__tb > h2 {
+    flex: 0 0 16.25rem;
+    flex-basis: 21.875rem;
+    margin-left: 9.375rem;
+}
+
+.main-start__tb > p {
+    flex: 0 0 37.5rem;
+    flex-basis: 37.5rem;
+    font-size: 1.125rem;
+    line-height: 2.25rem;
+    margin-right: 9.375rem;
+}
+
+.main-challenge > h2 {
+    display: inline-block;
+    margin-left: 15.625rem;
+    padding-bottom: 12.5rem;
+    width: 40.625rem;
+}
+
+.main-challenge__tiles {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-bottom: 16.25rem;
+    row-gap: 6.25rem;
+    width: 70%;
+}
+
+.main-challenge__tiles__steps > h4 {
+    display: inline;
+}
+
+.main-challenge__tiles__steps > img {
+    display: inline;
+    margin-right: 1.875rem;
+    object-fit: contain;
+    vertical-align:text-bottom;
+    width: 2rem;
+}
+
+.main-challenge__tiles__steps > p {
+    display: block;
+    padding-left: 3.75rem;
+    padding-top: 1rem;
+    width: 22.5rem;
+}
+
+/* !Flex column zum testen // Flow wäre hier wohl einfacher */
+.main-ready__headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-ready__headline > h3 {
+    padding-bottom: 1.5625rem;
+}
+
+.main-ready__headline > p {
+    align-self: center;
+    line-height: 1.125rem;
+    padding-bottom: 9.375rem;
+    width: 25rem;
+}
+
+.main-ready__contant {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 9.375rem;
+}
+
+.main-ready__contant__text{
+    flex-basis: 570px;
+}
+
+.main-ready__contant__text > img {
+    padding-bottom: 1.75rem;
+}
+
+.main-ready__contant__text > h4 {
+    padding-bottom: 1.5625rem;
+}
+
+.main-ready__contant > img {
+    max-height: 25.3125rem;
+}
+
+/* #=== Footer === */
+
+
+.signup_input {
+    border: none;
+    box-shadow: 0 0 0.625rem #0b0c1732;
+    color: #757575;
+    font: 1.125rem Arial;
+    padding: 1.25rem 6.25rem;
+}
+
+.footer__signup {
+    padding-bottom: 15rem;
+    text-align: center;
+}
+
+.footer__signup > h3 {
+    padding-bottom: 1.5625rem;
+}
+
+.footer__signup > p {
+    line-height: 1.1875rem;
+    margin: 0 auto;
+    padding-bottom: 3.125rem;
+    width: 21.25rem;
+}
+
+.footer__signup > form {
+    padding-bottom: 1.875rem;
+}
+
+footer > p {
+    padding-left: 8.125rem;
+}
+
+footer > p > img {
+    object-fit: cover;
+    width: 1.75rem;
+}
+
+/* #=== Modifier === */
+
+
+.--img_blend_multiply {
+    mix-blend-mode: multiply;
+}
+
+.--numeric {
+    color: var(--nummeric_color);
+    font-size: 3.25rem;
+    padding-bottom: 2.8125rem;
+}
+
+.--contant_order {
+    order: 1;
+}
+
+.--padding_correction {
+    padding-bottom: 12.5rem;
+}
